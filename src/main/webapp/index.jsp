@@ -10,6 +10,6 @@
 <br/>
 <a href="product?action=danh-sach-product">Danh sach Product</a>
 <br/>
-<a href="manufuter">Danh sach Manufuter</a>
+<a href="manager?action=danh-sach-manu">Danh sach Manufuter</a>
 </body>
 </html>

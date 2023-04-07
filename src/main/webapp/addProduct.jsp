@@ -1,12 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="edu.iuh.fit.mvcservlet.model.Manufacturer" %>
-<%@ page import="edu.iuh.fit.mvcservlet.model.Product" %><%--
-  Created by IntelliJ IDEA.
-  User: Le Quoc Phong
-  Date: 3/29/2023
-  Time: 9:09 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="edu.iuh.fit.mvcservlet.model.Product" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

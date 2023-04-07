@@ -1,5 +1,6 @@
 package edu.iuh.fit.mvcservlet.repositories;
 
+import edu.iuh.fit.mvcservlet.model.Manufacturer;
 import edu.iuh.fit.mvcservlet.model.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
@@ -52,6 +53,20 @@ public class GeneralRepository<T,ID> {
         }
         return product;
     }
+
+    public Manufacturer saveM(Manufacturer manufacturer) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.persist(manufacturer);
+            transaction.commit();
+        } catch (Exception ex) {
+            transaction.rollback();
+            ex.printStackTrace();
+            return null;
+        }
+        return manufacturer;
+    }
     public T update(T entity) {
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -65,4 +80,6 @@ public class GeneralRepository<T,ID> {
         }
         return entity;
     }
+
+
 }

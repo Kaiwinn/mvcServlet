@@ -15,4 +15,22 @@ public class ManufactureService {
     public List<Manufacturer> findAll(){
        return repository.findAll();
     }
+
+    //Kaiwin
+
+    public Manufacturer findById(Manufacturer manufacturer, int id) {
+        return repository.findByEntity(manufacturer, (long) id);
+    }
+
+    public Manufacturer deleteManu(Manufacturer manufacturer, int id) {
+        return repository.delete(manufacturer, (long) id);
+    }
+
+    public Manufacturer saveM(Manufacturer manufacturer) {
+        return repository.saveM(manufacturer);
+    }
+//
+    public Manufacturer updateManu(Manufacturer manufacturer) {
+        return repository.update(manufacturer);
+    }
 }
